@@ -1,14 +1,16 @@
 # frozen_string_literal: true
 
 def bubble_sort(arr, sorting: true)
-  while sorting
+  loop do
     sorting = false
+
     (arr.size - 1).times do |i|
       if arr[i] > arr[i + 1]
         arr[i], arr[i + 1] = arr[i + 1], arr[i]
         sorting = true
       end
     end
+    break unless sorting
   end
 
   arr
